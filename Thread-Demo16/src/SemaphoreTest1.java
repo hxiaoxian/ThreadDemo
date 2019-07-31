@@ -31,7 +31,7 @@ class MyThread extends Thread {
             sem.acquire(count);
 
             Thread.sleep(2000);
-            System.out.println(Thread.currentThread().getName() + " acquire count="+count);
+            System.out.println(Thread.currentThread().getName() + " acquire count=" + count);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {

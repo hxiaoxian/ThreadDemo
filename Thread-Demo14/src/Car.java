@@ -6,6 +6,7 @@ public class Car extends Thread {
         this.driver = driver;
     }
 
+    @Override
     public void run() {
         driver.driveCar();
     }

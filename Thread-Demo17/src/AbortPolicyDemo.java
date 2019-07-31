@@ -21,7 +21,7 @@ public class AbortPolicyDemo {
 
             // 新建10个任务，并将它们添加到线程池中。
             for (int i = 0; i < 10; i++) {
-                Runnable myrun = new MyRunnable3("task-"+i);
+                Runnable myrun = new MyRunnable3("task-" + i);
                 pool.execute(myrun);
             }
         } catch (RejectedExecutionException e) {
@@ -34,9 +34,11 @@ public class AbortPolicyDemo {
 
 class MyRunnable3 implements Runnable {
     private String name;
+
     public MyRunnable3(String name) {
         this.name = name;
     }
+
     @Override
     public void run() {
         try {

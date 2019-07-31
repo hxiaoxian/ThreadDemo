@@ -16,20 +16,19 @@ public class CyclicBarrierTest1 {
 
     static class InnerThread extends Thread{
         public void run() {
-            //try {
-            //    System.out.println(Thread.currentThread().getName() + " wait for CyclicBarrier.");
-            //
-            //    // 设置屏障
-            //    cb.await();
-            //
-            //    // cb的参与者数量等于5时，才继续往后执行
-            //    System.out.println(Thread.currentThread().getName() + " continued.");
-            //} catch (BrokenBarrierException e) {
-            //    e.printStackTrace();
-            //} catch (InterruptedException e) {
-            //    e.printStackTrace();
-            //}
-            System.out.println(1);
+            try {
+                System.out.println(Thread.currentThread().getName() + " wait for CyclicBarrier.");
+
+                // 设置屏障
+                cb.await();
+
+                // cb的参与者数量等于5时，才继续往后执行
+                System.out.println(Thread.currentThread().getName() + " continued.");
+            } catch (BrokenBarrierException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
